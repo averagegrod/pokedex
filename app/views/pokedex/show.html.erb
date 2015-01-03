@@ -1,0 +1,17 @@
+<h1>POKEDEX!</h1>
+
+
+<% @pokedex["pokemon"][0..100].each do |pokemon|  %>
+	<div class="pokemon">
+	<img src="http://pokeapi.co<%= pokemon["sprite"]["image"] %>">
+	<p><%= pokemon["name"].capitalize! %> </p>
+	<p><% pokemon["info"]["types"].each do |type| %>
+	<div class="type <%= type["name"] %>"><%= type["name"] %></div>
+	<% end %>
+	 </p>
+
+	</div>
+	<% end %>
+
+
+
