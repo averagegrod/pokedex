@@ -1,8 +1,30 @@
 <h1>POKEDEX!</h1>
+<div id="menu" data-no-turbolinks>
+	<a href="#" class="all">all</a>
+	<a href="#" class="normal">normal</a>
+	<a href="#" class="dark">dark</a>
+	<a href="#" class="dragon">dragon</a>
+	<a href="#" class="ghost">ghost</a>
+	<a href="#" class="grass">grass</a>
+	<a href="#" class="ground">ground</a>
+	<a href="#" class="fairy">fairy</a>
+	<a href="#" class="fire">fire</a>
+	<a href="#" class="flying">flying</a>
+	<a href="#" class="electric">electric</a>
+	<a href="#" class="rock">rock</a>
+	<a href="#" class="water">water</a>
+	<a href="#" class="bug">bug</a>
+	<a href="#" class="fighting">fighting</a>
+	<a href="#" class="ice">ice</a>
+	<a href="#" class="poison">poison</a>
+	<a href="#" class="psychic">psychic</a>
+	<a href="#" class="steel">steel</a>
+</div>
 
-
+<div id="container">
 <% @pokedex["pokemon"][0..100].each do |pokemon|  %>
-	<div class="pokemon">
+	<div class="<% pokemon["info"]["types"].each do |type| %><%= type["name"] %> <% end %>pokemon"
+	>
 	<img src="http://pokeapi.co<%= pokemon["sprite"]["image"] %>">
 	<p><%= pokemon["name"].capitalize! %> </p>
 	<p><% pokemon["info"]["types"].each do |type| %>
@@ -12,6 +34,7 @@
 
 	</div>
 	<% end %>
+	<div>
 
 
 

@@ -2,21 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$bug: #729f3f;
-$dragon: #53a4cf;
-$electric: #eed535;
-$fairy: #fdb9e9;
-$fighting: #d56723;
-$fire: #fd7d24;
-$flying: #3dc7ef;
-$ghost: #7b62a3;
-$grass: #9bcc50;
-$ground: #ab9842;
-$ice: #51c4e7;
-$normal: #a4acaf;
-$poison: #b97fc9;
-$psychic: #f366b9;
-$rock: #a38c21;
+$all: white;
+$bug: #ABB820;
+$dark: #705848;
+$dragon: #7038F8;
+$electric: #F8D030;
+$fairy: #EE99AC;
+$fighting: #C03028;
+$fire: #F08030;
+$flying: #A890F0;
+$ghost: #705698;
+$grass: #78C850;
+$ground: #B99E56;
+$ice: #98D8D8;
+$normal: #A8A878;
+$poison: #A040A0;
+$psychic: #F85888;
+$rock: #B8A038;
 $steel: #9eb7b8;
 $water: #4592c4;
 
@@ -24,20 +26,12 @@ body{
   background-color: #30a7d7;
 }
 
-.pokemon{
-  background-color: white;
-  border-radius: 10px;
-  float: left;
-  margin: 10px;
-  text-align: center;
-  font-size: 1.2em;
-  font-family: "Flexo-Medium",arial,sans-serif;
-  & img{
-    background-color: black;
-    border-radius: 5px;
-    height: 120px;
-    margin: 5px;
-  }
+h1{
+	color: yellow;
+	font-size: 40px;
+	font-family: 'Pokemon Solid';
+	letter-spacing: 0.3em;
+	text-shadow: -.1em .1em blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
 }
 
 .type{
@@ -46,8 +40,14 @@ body{
 	margin: 0px 2px;
 	padding: 0px 5px;
 }
+.all{
+	background-color: $all;
+}
 .bug{
 	background-color: $bug;
+}
+.dark{
+	background-color: $dark;
 }
 .fire{
 	background-color: $fire;
@@ -97,4 +97,35 @@ body{
 }
 .steel{
 	background-color: $steel;
+}
+
+#menu a{
+	border-radius: 5px;
+	display: inline-block;
+	font-family: "Flexo-Medium",arial,sans-serif;
+	font-size: 1.2em;
+	margin: .2em;
+	padding: .2em;
+	text-decoration: none;
+	&:link, &:visited{
+		color:black;
+	}
+
+
+}
+
+.pokemon{
+  background-color: white;
+  border-radius: 10px;
+  float: left;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  & img{
+    background-color: black;
+    border-radius: 5px;
+    height: 120px;
+    margin: 5px;
+  }
 }
