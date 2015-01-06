@@ -7,8 +7,13 @@ $( document ).ready(function() {
 var $container = $('#container');
 $container.isotope({
 	itemSelector: '.pokemon',
-	layoutMode: 'fitRows'
+	layoutMode: 'fitRows',
+	getSortData: {
+	id: '[data-national-id] parseInt'
+	},
+	sortBy: 'id'
 });
+
 
 
 $('#menu a').on('click',function(){

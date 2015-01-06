@@ -2,7 +2,7 @@ class PokedexController < ApplicationController
 
 	def show
 		@pokedex = JSON.parse Pokegem.get "pokedex", 1
-		@pokedex["pokemon"][0..100].each do |pokemon|
+		@pokedex["pokemon"][0..200].each do |pokemon|
 			id = pokemon["resource_uri"]
 			id.slice! "api/v1/pokemon/"
 			id.slice! "/"

@@ -22,16 +22,27 @@
 </div>
 
 <div id="container">
-<% @pokedex["pokemon"][0..100].each do |pokemon|  %>
-	<div class="<% pokemon["info"]["types"].each do |type| %><%= type["name"] %> <% end %>pokemon"
-	>
-	<img src="http://pokeapi.co<%= pokemon["sprite"]["image"] %>">
-	<p><%= pokemon["name"].capitalize! %> </p>
-	<p><% pokemon["info"]["types"].each do |type| %>
-	<div class="type <%= type["name"] %>"><%= type["name"] %></div>
-	<% end %>
-	 </p>
+	<% @pokedex["pokemon"][0..200].each do |pokemon|  %>
 
+	<div class="<% pokemon["info"]["types"].each do |type| %><%= type["name"] %> <% end %>pokemon" data-national-id="<%= pokemon["info"]["national_id"] %>">
+		<img src="http://pokeapi.co<%= pokemon["sprite"]["image"] %>">
+		<p><%= pokemon["name"].capitalize! %> </p>
+		<p><% pokemon["info"]["types"].each do |type| %>
+			<div class="type <%= type["name"] %>"><%= type["name"] %></div>
+			<% end %>
+		</p>
+
+		<p>hp:<%= pokemon["info"]["hp"] %></p>
+<span class="generation">gen:
+		<% case pokemon["info"]["national_id"] %>
+		<% when 1..151 %>
+		1
+		<% when 152..300 %>
+		2
+		<% end %>
+		</span>
+		
+		
 	</div>
 	<% end %>
 	<div>
